@@ -133,7 +133,7 @@ const MaterialDetail = () => {
           href={Material.file.url.replace("/upload/", "/upload/fl_attachment/")}
           className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-full shadow hover:bg-blue-600 transition text-sm md:text-base"
         >
-          <img  onClick={toast.success("Download successfully!")}
+          <img
             src={downloadIcon}
             alt="Download"
             className="w-5 h-5 mr-2 rounded-full bg-white p-1"
