@@ -35,7 +35,7 @@ const VerifyEmail = () => {
     setLoading(false);
     if (result.success) {
       toast.success('Verification successful! You are now logged in.');
-      navigate('/');
+      navigate('/classrooms');
     } else {
       setError(result.message);
     }

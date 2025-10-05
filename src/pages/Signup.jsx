@@ -24,9 +24,9 @@ const Signup = () => {
     setLoading(false);
     if (result.success) {
       setSuccess(result.message + ' Redirecting to verify...');
-      setTimeout(() => {
+      
         navigate('/verify-email', { state: { email: formData.email } });
-      }, 2000);
+    
     } else {
       setError(result.message);
     }
