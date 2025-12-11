@@ -1,4 +1,4 @@
-/*import React, { useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
@@ -84,19 +84,6 @@ const Navbar = () => {
         </div>
       </nav>
       <div className="pt-24 md:pt-16"></div>
-    </>
-  );
-};
-
-export default Navbar;*/
-import DesktopNavbar from "./DesktopNavbar";
-import MobileNavbar from "./MobileNavbar";
-
-const Navbar = () => {
-  return (
-    <>
-      <MobileNavbar />   {/* only visible on mobile */}
-      <DesktopNavbar />  {/* only visible on desktop */}
     </>
   );
 };
