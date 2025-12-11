@@ -67,31 +67,30 @@ function App() {
 
 export default App;*/
 
-
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar'; 
-import Footer from './components/Footer'; 
-import Home from './pages/Home'; 
-import AuthorMaterial from "./pages/AuthorMaterial"; 
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import AuthorMaterial from "./pages/AuthorMaterial";
 import MaterialDetails from "./pages/MaterialDetails";
 import NewAuthor from './pages/NewAuthor';
 import NewMaterial from './pages/NewMaterial';
 import EditMaterial from './pages/EditListing';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import VerifyEmail from './pages/VerifyEmail.jsx';
+import VerifyEmail from './pages/VerifyEmail';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import Feedback from './pages/Feedback';
 import ConfirmDelete from './components/ConfirmDelete';
-import ErrorPage from './components/ErrorPage'; 
+import ErrorPage from './components/ErrorPage';
 import Sidebar from "./components/Sidebar";
 import DeleteAuthor from './components/DeleteAuthor';
 import WelcomeOverlay from './pages/Welcome';
 
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'; 
-import { AuthProvider } from './context/AuthContext'; 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 
 const queryClient = new QueryClient();
@@ -105,10 +104,10 @@ function App() {
       <Router>
         <AuthProvider>
 
-          {/* NAVBAR receives control to open sidebar */}
+          {/* NAVBAR */}
           <Navbar setSidebarOpen={setSidebarOpen} />
 
-          {/* SIDEBAR ALWAYS MOUNTED, hidden when closed */}
+          {/* SIDEBAR (always mounted) */}
           <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
 
           <main className="container">
@@ -121,20 +120,18 @@ function App() {
                 </>
               }/>
 
-              <Route path="/classrooms" element={<Home/>} />
+              <Route path="/classrooms" element={<Home />} />
+              <Route path="/classrooms/:id" element={<AuthorMaterial />} />
+              <Route path="/material/:id" element={<MaterialDetails />} />
 
-              <Route path="/classrooms/:id" element={<AuthorMaterial/>} />
-              <Route path="/material/:id" element={<MaterialDetails/>} />
-
-              <Route path="/login" element={<Login/>} />
-              <Route path="/signup" element={<Signup/>} />
-
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
               <Route path="/verify-email" element={<VerifyEmail />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/reset-password" element={<ResetPassword />} />
 
               <Route path="/classrooms/new" element={<ProtectedRoute><NewAuthor /></ProtectedRoute>} />
-              <Route path="/material/new/:id" element={<ProtectedRoute><NewMaterial/></ProtectedRoute>} />
+              <Route path="/material/new/:id" element={<ProtectedRoute><NewMaterial /></ProtectedRoute>} />
               <Route path="/material/:id/edit" element={<ProtectedRoute><EditMaterial /></ProtectedRoute>} />
               <Route path="/material/:id/delete" element={<ProtectedRoute><ConfirmDelete /></ProtectedRoute>} />
               <Route path="/author/:id/delete" element={<ProtectedRoute><DeleteAuthor /></ProtectedRoute>} />
@@ -155,4 +152,3 @@ function App() {
 }
 
 export default App;
-
