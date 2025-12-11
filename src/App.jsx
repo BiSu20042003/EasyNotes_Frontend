@@ -16,6 +16,7 @@ import ResetPassword from './pages/ResetPassword'; // Equivalent to verifyPass.e
 import Feedback from './pages/Feedback'; // Equivalent to feedback.ejs
 import ConfirmDelete from './components/ConfirmDelete';
 import ErrorPage from './components/ErrorPage'; 
+import Sidebar from "./components/Sidebar";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'; 
 import { AuthProvider } from './context/AuthContext'; 
 import ProtectedRoute from './components/ProtectedRoute'; // For protecting routes
