@@ -26,7 +26,7 @@ const Sidebar = ({ open, setOpen }) => {
       <aside
         aria-hidden={!open}
         style={panelStyle}
-        className="fixed top-0 left-0 h-full bg-white shadow-xl z-[999]"
+        className="fixed top-0 left-0 h-full bg-white shadow-xl z-[99999]"
       >
         {/* Add responsive width override using Tailwind utility classes */}
         <div className="w-full md:w-[20vw]"> {/* wrapper to manage desktop width */}
