@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+uimport React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
@@ -25,7 +25,7 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-sky-300 to-sky-400 shadow-md">
         <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
-          <Link to="/" className="md:hidden text-2xl text-blue-900 font-bold">☰</Link>
+          <Link to="/menu" className="md:hidden text-2xl text-blue-900 font-bold">☰</Link>
           <Link
             to="/classrooms"
             className="text-xl font-bold text-blue-900 whitespace-nowrap"
