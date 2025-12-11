@@ -25,6 +25,7 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-sky-300 to-sky-400 shadow-md">
         <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
+          <Link to="/" className="block md:hidden text-2xl text-blue-900 font-bold">☰</Link>
           <Link
             to="/classrooms"
             className="text-xl font-bold text-blue-900 whitespace-nowrap"
@@ -46,8 +47,7 @@ const Navbar = () => {
             <button
               type="submit"
               className="px-4 py-2 bg-blue-600 text-white rounded-r-full hover:bg-blue-800 transition"
-            >
-              🔍
+            >🔍
             </button>
           </form>
           <div className="flex items-center space-x-4 mt-3 md:mt-0">
