@@ -1,26 +1,21 @@
-// src/components/Sidebar.jsx
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 const Sidebar = ({ open, setOpen }) => {
-
   const { currUser, logout } = useAuth();
 
   return (
     <div
       className={`
         fixed top-0 left-0 h-full
-        w-1/2 md:w-1/5            /* 50% on mobile, 20% on desktop */
-        bg-white shadow-xl 
+        w-1/2 md:w-1/5
+        bg-white shadow-xl
         z-[999]
         transform transition-transform duration-300
         ${open ? "translate-x-0" : "-translate-x-full"}
       `}
     >
-
-      {/* Header with close button */}
       <div className="flex items-center justify-between p-4 border-b">
         <span className="text-xl font-bold text-blue-900">{`</EasyNotes>`}</span>
         <button
@@ -31,7 +26,6 @@ const Sidebar = ({ open, setOpen }) => {
         </button>
       </div>
 
-      {/* Menu items */}
       <div className="flex flex-col p-4 space-y-4">
 
         <Link to="/classrooms" onClick={() => setOpen(false)} className="text-lg font-semibold hover:text-blue-900">
@@ -77,9 +71,9 @@ const Sidebar = ({ open, setOpen }) => {
         )}
 
       </div>
-
     </div>
   );
 };
 
 export default Sidebar;
+
