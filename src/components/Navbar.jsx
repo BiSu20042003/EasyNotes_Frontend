@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
-const Navbar = () => {
+const Navbar = ({ setSidebarOpen }) => {
   const { currUser, logout } = useAuth();
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
