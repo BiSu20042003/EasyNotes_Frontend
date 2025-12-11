@@ -41,6 +41,7 @@ function App() {
         }
       />
             <Route path="/classrooms" element={<Home/>} />
+            <Route path="/menu" element={<Sidebar />} />
             <Route path="/classrooms/:id" element={<AuthorMaterial/>} />
             <Route path="/material/:id" element={<MaterialDetails/>} />
             <Route path="/login" element={<Login/>} />
