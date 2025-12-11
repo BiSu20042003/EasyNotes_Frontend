@@ -18,7 +18,7 @@ const Sidebar = ({ open, setOpen }) => {
       {/* Backdrop (keeps page visible but blocks pointer) */}
       {open && (
         <div
-          className="fixed inset-0 bg-black/10 z-[998]"
+          className="fixed inset-0 bg-black/10 z-[99999]"
           onClick={() => setOpen(false)}
         />
       )}
