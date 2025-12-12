@@ -82,7 +82,7 @@ const Home = () => {
         {allAuthors.map((ele) => (
           <div
             key={ele._id}
-            className="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm shadow-xl rounded-3xl overflow-hidden hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 flex flex-col border border-indigo-700"
+            className="bg-gray-800 bg-opacity-70 shadow-xl rounded-3xl overflow-hidden hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 flex flex-col border border-indigo-700"
           >
             <Link to={`/classrooms/${ele._id}`} className="flex flex-col items-center p-6">
               <img
