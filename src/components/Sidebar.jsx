@@ -11,6 +11,8 @@ const Sidebar = ({ open, setOpen }) => {
     transition: "transform 260ms ease",
     width: "50%",          // mobile
     // width override for desktop via media query below
+    position: "fixed",       // added
+  isolation: "isolate",    // added
   };
 
   return (
