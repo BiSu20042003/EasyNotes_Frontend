@@ -119,7 +119,7 @@ const Navbar = ({ setSidebarOpen }) => {
 
           {/* HAMBURGER */}
           <button
-            onClick={() => setSidebarOpen(true)}
+            onClick={() => setSidebarOpen(prev => !prev)}
             className="md:hidden text-2xl text-blue-900 font-bold"
           >
             ☰
