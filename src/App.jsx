@@ -101,9 +101,9 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Router>
+<Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
+  <Router>
         <AuthProvider>
-          <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
 
           {/* NAVBAR */}
           <Navbar setSidebarOpen={setSidebarOpen} />
