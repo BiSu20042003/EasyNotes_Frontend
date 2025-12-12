@@ -135,7 +135,7 @@ const Home = () => {
 
         {!searchTerm && (
           <Link to="/classrooms/new">
-            <div className="flex flex-col items-center justify-center bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm border-2 border-dashed border-indigo-600 rounded-3xl p-6 h-full min-h-[250px] hover:bg-gray-700 transition duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer shadow-xl">
+            <div className="flex flex-col items-center justify-center bg-gray-800 bg-opacity-70 border-2 border-dashed border-indigo-600 rounded-3xl p-6 h-full min-h-[250px] hover:bg-gray-700 transition duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer shadow-xl">
               <img
                 className="w-24 h-24 object-cover rounded-full mb-4 opacity-80"
                 src={addLogo}
