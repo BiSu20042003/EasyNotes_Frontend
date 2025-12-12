@@ -14,7 +14,7 @@ const VerifyEmail = () => {
   if (!email) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 px-4">
-        <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-6 text-white text-center">
+        <div className="max-w-md w-full bg-white/10 rounded-2xl shadow-2xl p-6 text-white text-center">
           <p className="mb-4 text-lg">⚠️ No email address provided.</p>
           <Link
             to="/signup"
@@ -43,7 +43,7 @@ const VerifyEmail = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 px-4 py-12">
-      <div className="w-full max-w-md bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-8 text-white">
+      <div className="w-full max-w-md bg-white/10 rounded-2xl shadow-2xl p-8 text-white">
         
         <h3 className="text-3xl font-bold text-center mb-4">Verify Your Email</h3>
         <p className="text-center text-blue-200 mb-6">
