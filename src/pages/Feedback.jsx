@@ -36,7 +36,7 @@ const Feedback = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 px-4 py-12">
-      <div className="w-full max-w-lg bg-white/10 backdrop-blur-lg rounded-2xl shadow-xl p-8 text-white">
+      <div className="w-full max-w-lg bg-white/10 rounded-2xl shadow-xl p-8 text-white">
         
         <h3 className="text-2xl font-bold text-center text-white mb-2">
           Give Us Feedback
