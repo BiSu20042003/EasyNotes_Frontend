@@ -102,11 +102,12 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
 <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
+<Navbar setSidebarOpen={setSidebarOpen} />
+
   <Router>
         <AuthProvider>
 
           {/* NAVBAR */}
-          <Navbar setSidebarOpen={setSidebarOpen} />
 
           {/* SIDEBAR (always mounted) */}
 
