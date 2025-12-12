@@ -86,7 +86,7 @@ const NewMaterial = () => {
 
     return (
         <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4">
-            <div className="w-full max-w-3xl p-8 space-y-8 bg-slate-800/50 backdrop-blur-sm border border-slate-700 shadow-2xl shadow-blue-900/20 rounded-2xl">
+            <div className="w-full max-w-3xl p-8 space-y-8 bg-slate-800/50 border border-slate-700 shadow-2xl shadow-blue-900/20 rounded-2xl">
      <div className="text-center">
             <h3 className="text-3xl font-bold text-sky-300 mb-2">Post New Material</h3>
             <p className="text-gray-400">Upload documents or images with details.</p>
