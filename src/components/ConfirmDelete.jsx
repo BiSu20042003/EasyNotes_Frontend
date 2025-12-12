@@ -24,7 +24,7 @@ const ConfirmDelete = () => {
   
    return (
         <div className="min-h-screen bg-slate-900 text-gray-300 flex flex-col justify-center items-center p-4 text-center">
-            <div className="w-full max-w-md p-8 space-y-6 bg-slate-800/50 backdrop-blur-sm border border-red-700/50 shadow-2xl shadow-red-900/20 rounded-2xl">
+            <div className="w-full max-w-md p-8 space-y-6 bg-slate-800/50 border border-red-700/50 shadow-2xl shadow-red-900/20 rounded-2xl">
                 <div className="space-y-2">
                     <h4 className="text-2xl font-bold text-red-300">
                         Delete Material Confirmation
