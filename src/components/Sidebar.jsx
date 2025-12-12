@@ -18,7 +18,7 @@ const Sidebar = ({ open, setOpen }) => {
       {/* Backdrop (keeps page visible but blocks pointer) */}
       {open && (
         <div
-          className="fixed inset-0 bg-black/10 z-[2147483647]"
+          className="fixed inset-0 bg-black/10 z-[2147483647] !important"
           onClick={() => setOpen(false)}
         />
       )}
@@ -26,7 +26,7 @@ const Sidebar = ({ open, setOpen }) => {
       <aside
         aria-hidden={!open}
         style={panelStyle}
-        className="fixed top-0 left-0 h-full bg-white shadow-xl z-[99999]"
+        className="fixed top-0 left-0 h-full bg-white shadow-xl z-[99999] !important"
       >
         {/* Add responsive width override using Tailwind utility classes */}
         <div className="w-full md:w-[20vw]"> {/* wrapper to manage desktop width */}
