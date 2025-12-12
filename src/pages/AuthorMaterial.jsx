@@ -51,7 +51,7 @@ const AuthorMaterial = () => {
         {currUser && currUser._id === id && (
           <>
             <Link to={`/material/new/${id}`} className="w-full max-w-xs">
-              <div className="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm shadow-xl rounded-3xl overflow-hidden hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-indigo-700 cursor-pointer p-0">
+              <div className="bg-gray-800 bg-opacity-70 shadow-xl rounded-3xl overflow-hidden hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-indigo-700 cursor-pointer p-0">
                 <img
                   src={addMaterialLogo}
                   alt="Add New Material"
@@ -87,7 +87,7 @@ const AuthorMaterial = () => {
                   to={`/material/${ele._id}`}
                   key={ele._id}
                   className="
-                    bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm shadow-xl rounded-3xl
+                    bg-gray-800 bg-opacity-70 shadow-xl rounded-3xl
                     hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1
                     p-0 text-center border border-indigo-700 overflow-hidden
                     lg:scale-[0.8] lg:origin-center
@@ -110,7 +110,7 @@ const AuthorMaterial = () => {
         {currUser && currUser._id === id && (
           <>
             <Link to={`/material/new/${id}`}>
-               <div className="h-full flex flex-col items-center justify-center bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm border-2 border-dashed border-indigo-600 rounded-3xl p-0 hover:bg-gray-700 transition duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer shadow-xl overflow-hidden">
+               <div className="h-full flex flex-col items-center justify-center bg-gray-800 bg-opacity-70 border-2 border-dashed border-indigo-600 rounded-3xl p-0 hover:bg-gray-700 transition duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer shadow-xl overflow-hidden">
                  <img
                    src={addMaterialLogo}
                    alt="Add New Material"
