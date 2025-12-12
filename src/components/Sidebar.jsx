@@ -17,7 +17,7 @@ const Sidebar = ({ open, setOpen }) => {
 
   return (
     <>
-      {open && (
+      {openShare && (
         <div className="fixed inset-0 bg-black/10 z-[2147483647] !important" onClick={() => setOpen(false)}/>
       )}
 
