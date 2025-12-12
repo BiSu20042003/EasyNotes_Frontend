@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import ShareMenu from "./ShareMenu";
 
 const Sidebar = ({ open, setOpen }) => {
-  const [open, setOpen] = useState(false);
+  const [openShare, setopenShare] = useState(false);
   const linkToShare = "https://easy-notes-frontend-two.vercel.app/";
   const { currUser, logout } = useAuth();
 
@@ -36,9 +36,9 @@ const Sidebar = ({ open, setOpen }) => {
             <Link to="/profile" onClick={() => setOpen(false)} className="text-lg font-semibold hover:text-blue-900">My Profile</Link>
             <Link to="/authors" onClick={() => setOpen(false)} className="text-lg font-semibold hover:text-blue-900">Authors</Link>
             <hr/>
-            <p onClick={() => setOpen(!open)}></p>
+            <p onClick={() => setopenShare(!openShare)}>Invite Friends</p>
             {open && (
-          <ShareMenu link={linkToShare} onClose={() => setOpen(false)}/>
+          <ShareMenu link={linkToShare} onClose={() => setopenShare(false)}/>
             )}
             <hr />
             {!currUser ? (
