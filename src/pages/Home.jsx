@@ -162,7 +162,7 @@ import defaultProfileImg from '../assets/profile.png';
 import addLogo from '../assets/OIP.jpg';
 
 // 🔹 feature images
-import aiStudyImg from '../assets/ai.png';
+import aiStudyImg from '../assets/Ai.png';
 import writingLogoImg from '../assets/writingLogo.jpg';
 
 const queryClient = new QueryClient();
