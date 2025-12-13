@@ -111,7 +111,7 @@ function App() {
 
           {/* SIDEBAR (always mounted) */}
 
-          <main className="container">
+          <main className="w-full">
             <Routes>
 
               <Route path="/" element={
