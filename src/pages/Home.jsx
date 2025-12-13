@@ -161,7 +161,7 @@ import { useAuth } from '../context/AuthContext';
 import defaultProfileImg from '../assets/profile.png';
 import addLogo from '../assets/OIP.jpg';
 
-// 🔹 feature images
+// Feature images
 import aiStudyImg from '../assets/Ai.png';
 import writingLogoImg from '../assets/writingLogo.jpg';
 
@@ -218,36 +218,24 @@ const Home = () => {
     return <div className="text-center py-10 text-red-500">Error: {error.message || 'Failed to fetch !!.'}</div>;
   }
 
-  if (!allAuthors || allAuthors.length === 0) {
-    return (
-      <div className="flex flex-col items-center justify-center py-10 text-gray-700">
-        <p className="text-lg font-medium">No Author found!!</p>
-        {!searchTerm && (
-          <Link
-            to="/classrooms/new"
-            className="mt-4 px-6 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition"
-          >
-            Become an Author!
-          </Link>
-        )}
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 p-6">
 
-      {/* 🔹 FEATURE SECTION */}
+      {/* ================= FEATURE SECTION ================= */}
       {!searchTerm && (
         <div className="max-w-7xl mx-auto mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex flex-col lg:flex-row gap-6">
 
-            <Link to="/feature-ai" className="group">
-              <div className="overflow-hidden rounded-[15%] shadow-xl">
+            {/* Feature 1 */}
+            <Link to="/feature-ai" className="flex-1">
+              <div
+                className="overflow-hidden shadow-xl"
+                style={{ borderRadius: '15%' }}
+              >
                 <img
                   src={aiStudyImg}
                   alt="AI Study"
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-[280px] object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
               <p className="mt-3 text-center text-lg font-semibold text-indigo-200">
@@ -255,12 +243,16 @@ const Home = () => {
               </p>
             </Link>
 
-            <Link to="/feature-author" className="group">
-              <div className="overflow-hidden rounded-[15%] shadow-xl">
+            {/* Feature 2 */}
+            <Link to="/feature-author" className="flex-1">
+              <div
+                className="overflow-hidden shadow-xl"
+                style={{ borderRadius: '15%' }}
+              >
                 <img
                   src={writingLogoImg}
                   alt="Become Author"
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-[280px] object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
               <p className="mt-3 text-center text-lg font-semibold text-indigo-200">
@@ -271,13 +263,15 @@ const Home = () => {
           </div>
         </div>
       )}
+      {/* ================= END FEATURE SECTION ================= */}
 
-      {/* 🔹 AUTHORS GRID */}
+
+      {/* ================= AUTHORS GRID ================= */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        {allAuthors.map((ele) => (
+        {allAuthors?.map((ele) => (
           <div
             key={ele._id}
-            className="bg-gray-800 bg-opacity-70 shadow-xl rounded-3xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col border border-indigo-700"
+            className="bg-gray-800 bg-opacity-70 shadow-xl rounded-3xl overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1 flex flex-col border border-indigo-700"
           >
             <Link to={`/classrooms/${ele._id}`} className="flex flex-col items-center p-6">
               <img
@@ -349,4 +343,3 @@ const Home = () => {
 };
 
 export default HomeWrapper;
-
