@@ -152,7 +152,6 @@ const Home = () => {
 };
 
 export default HomeWrapper;*/
-
 import React, { useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useQuery, QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -206,7 +205,7 @@ const Home = () => {
       await api.post(`/author/${authorId}/follow`);
       queryClient.invalidateQueries(['authors', searchTerm]);
     } catch (error) {
-      console.error("Failed to follow/unfollow:", error);
+      console.error('Failed to follow/unfollow:', error);
     }
   };
 
@@ -221,50 +220,53 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 p-6">
 
-      {/* ================= FEATURE SECTION ================= */}
+      {/* ================= FEATURE CARDS ================= */}
       {!searchTerm && (
         <div className="max-w-7xl mx-auto mb-12">
-          <div className="flex flex-col lg:flex-row gap-6">
+          <div className="flex flex-col md:flex-row md:flex-nowrap gap-6">
 
-            {/* Feature 1 */}
-            <Link to="/feature-ai" className="flex-1">
-              <div
-                className="overflow-hidden shadow-xl"
-                style={{ borderRadius: '15%' }}
-              >
-                <img
-                  src={aiStudyImg}
-                  alt="AI Study"
-                  className="w-full h-[280px] object-cover transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-              <p className="mt-3 text-center text-lg font-semibold text-indigo-200">
-                Learn smarter with AI-powered study materials
-              </p>
-            </Link>
+            {/* Card 1 */}
+            <div className="w-full md:w-1/2">
+              <Link to="/feature-ai">
+                <div
+                  className="overflow-hidden shadow-xl bg-gray-800"
+                  style={{ borderRadius: '15%' }}
+                >
+                  <img
+                    src={aiStudyImg}
+                    alt="AI Study"
+                    className="w-full h-[300px] object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+                <p className="mt-3 text-center text-lg font-semibold text-indigo-200">
+                  Learn smarter with AI-powered study materials
+                </p>
+              </Link>
+            </div>
 
-            {/* Feature 2 */}
-            <Link to="/feature-author" className="flex-1">
-              <div
-                className="overflow-hidden shadow-xl"
-                style={{ borderRadius: '15%' }}
-              >
-                <img
-                  src={writingLogoImg}
-                  alt="Become Author"
-                  className="w-full h-[280px] object-cover transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-              <p className="mt-3 text-center text-lg font-semibold text-indigo-200">
-                Become an author and share your knowledge
-              </p>
-            </Link>
+            {/* Card 2 */}
+            <div className="w-full md:w-1/2">
+              <Link to="/feature-author">
+                <div
+                  className="overflow-hidden shadow-xl bg-gray-800"
+                  style={{ borderRadius: '15%' }}
+                >
+                  <img
+                    src={writingLogoImg}
+                    alt="Become Author"
+                    className="w-full h-[300px] object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+                <p className="mt-3 text-center text-lg font-semibold text-indigo-200">
+                  Become an author and share your knowledge
+                </p>
+              </Link>
+            </div>
 
           </div>
         </div>
       )}
-      {/* ================= END FEATURE SECTION ================= */}
-
+      {/* ================= END FEATURE CARDS ================= */}
 
       {/* ================= AUTHORS GRID ================= */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -301,9 +303,7 @@ const Home = () => {
                     handleFollow(ele._id);
                   }}
                 >
-                  {currUser && ele.followedBy.includes(currUser._id)
-                    ? 'Following'
-                    : 'Follow'}
+                  {currUser && ele.followedBy.includes(currUser._id) ? 'Following' : 'Follow'}
                 </button>
               )}
 
@@ -343,3 +343,4 @@ const Home = () => {
 };
 
 export default HomeWrapper;
+
