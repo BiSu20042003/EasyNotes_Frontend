@@ -37,7 +37,7 @@ const Sidebar = ({ open, setOpen }) => {
             <Link to="/authors" onClick={() => setOpen(false)} className="text-lg font-semibold hover:text-blue-900">Authors</Link>
             <hr/>
             <p onClick={() => setopenShare(!openShare)}>Invite Friends</p>
-            {open && (
+            {openShare && (
           <ShareMenu link={linkToShare} onClose={() => setopenShare(false)}/>
             )}
             <hr />
