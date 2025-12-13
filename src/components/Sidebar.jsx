@@ -24,7 +24,7 @@ const Sidebar = ({ open, setOpen }) => {
       <aside
         aria-hidden={!open}
         style={panelStyle}
-        className="fixed w-1/2 md:w-1/5 top-20 left-0 h-full bg-white shadow-xl z-[99999] !important">
+        className="fixed w-1/2 md:w-1/5 top-0 left-0 h-full bg-white shadow-xl z-[99999] !important">
         <div className="w-full md:w-[20vw]"> 
           <div className="flex items-center justify-between p-4 border-b">
             <span className="text-xl font-bold text-blue-900">{`</EasyNotes>`}</span>
